@@ -1,0 +1,144 @@
+.imitacao-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.imitacao-menino {
+  background: linear-gradient(135deg, #0a1628 0%, #1a3a5c 30%, #1C7ED6 70%, #4DABF7 100%);
+}
+
+.imitacao-menina {
+  background: linear-gradient(135deg, #2a0a1a 0%, #5c1a3a 30%, #E0457B 70%, #FF6B9D 100%);
+}
+
+/* Floating emoji decorations */
+.imitacao-decorations {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.imitacao-floating-emoji {
+  position: absolute;
+  animation: imitacaoFloat 4s ease-in-out infinite;
+  opacity: 0.25;
+  filter: blur(0.5px);
+}
+
+@keyframes imitacaoFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-15px) rotate(5deg); }
+  75% { transform: translateY(10px) rotate(-5deg); }
+}
+
+/* Content */
+.imitacao-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Team badge */
+.imitacao-team-badge {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 0.6rem 2rem;
+  border-radius: 50px;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.imitacao-menino .imitacao-team-badge {
+  background: rgba(77, 171, 247, 0.25);
+  border: 2px solid rgba(77, 171, 247, 0.5);
+  color: #A5D8FF;
+}
+
+.imitacao-menina .imitacao-team-badge {
+  background: rgba(255, 107, 157, 0.25);
+  border: 2px solid rgba(255, 107, 157, 0.5);
+  color: #FFB3CC;
+}
+
+/* Number circle */
+.imitacao-number {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #fff;
+  animation: bounce 0.8s ease-out 0.3s both;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.imitacao-menino .imitacao-number {
+  background: linear-gradient(135deg, #1C7ED6, #4DABF7);
+  border: 4px solid #A5D8FF;
+}
+
+.imitacao-menina .imitacao-number {
+  background: linear-gradient(135deg, #E0457B, #FF6B9D);
+  border: 4px solid #FFB3CC;
+}
+
+/* Card */
+.imitacao-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 2rem 2.5rem;
+  width: 100%;
+  animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+
+.imitacao-menino .imitacao-card {
+  border: 2px solid rgba(77, 171, 247, 0.3);
+  box-shadow: 0 8px 32px rgba(28, 126, 214, 0.2);
+}
+
+.imitacao-menina .imitacao-card {
+  border: 2px solid rgba(255, 107, 157, 0.3);
+  box-shadow: 0 8px 32px rgba(224, 69, 123, 0.2);
+}
+
+.imitacao-card-label {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.7;
+  margin-bottom: 0.8rem;
+}
+
+.imitacao-text {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.3;
+  color: #fff;
+  margin: 0;
+}
+
+/* Footer */
+.imitacao-footer {
+  font-size: 1.3rem;
+  font-weight: 600;
+  opacity: 0.8;
+  animation: fadeInUp 0.8s ease-out 0.7s both;
+}

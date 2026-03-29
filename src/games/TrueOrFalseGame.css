@@ -1,0 +1,138 @@
+.tf-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  width: 100%;
+  max-width: 900px;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.tf-statement {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.2;
+  max-width: 800px;
+}
+
+.tf-team-select {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.tf-team-btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.06);
+  border: 3px solid rgba(255, 255, 255, 0.12);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tf-team-btn.active {
+  border-color: var(--team-color);
+  color: var(--team-color);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.tf-cards {
+  display: flex;
+  gap: var(--space-xl);
+  width: 100%;
+  justify-content: center;
+}
+
+.tf-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  width: 200px;
+  height: 200px;
+  border-radius: var(--radius-lg);
+  border: 4px solid rgba(255, 255, 255, 0.15);
+  background: var(--color-bg-card);
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.tf-card-clickable {
+  cursor: pointer;
+}
+
+.tf-card-clickable:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.tf-true {
+  border-color: rgba(81, 207, 102, 0.3);
+}
+
+.tf-false {
+  border-color: rgba(255, 107, 107, 0.3);
+}
+
+.tf-card-icon {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+}
+
+.tf-true .tf-card-icon {
+  color: var(--color-success);
+}
+
+.tf-false .tf-card-icon {
+  color: var(--color-danger);
+}
+
+.tf-card-label {
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+
+.tf-picks {
+  display: flex;
+  gap: 0.3rem;
+  position: absolute;
+  bottom: 0.6rem;
+}
+
+.tf-pick {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  animation: bounce 0.3s ease-out;
+}
+
+.tf-card-correct {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px rgba(81, 207, 102, 0.4);
+  animation: pulse 0.8s ease-out;
+}
+
+.tf-card-correct.tf-true {
+  border-color: var(--color-success);
+  background: rgba(81, 207, 102, 0.15);
+}
+
+.tf-card-correct.tf-false {
+  border-color: var(--color-danger);
+  background: rgba(255, 107, 107, 0.15);
+  box-shadow: 0 0 40px rgba(255, 107, 107, 0.4);
+}
+
+.tf-card-wrong {
+  opacity: 0.25;
+  transform: scale(0.85);
+}

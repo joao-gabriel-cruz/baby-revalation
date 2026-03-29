@@ -1,0 +1,121 @@
+.quiz-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  width: 100%;
+  max-width: 900px;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.quiz-question {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.quiz-team-select {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.quiz-team-btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.06);
+  border: 3px solid rgba(255, 255, 255, 0.12);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.quiz-team-btn.active {
+  border-color: var(--team-color);
+  color: var(--team-color);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.quiz-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  width: 100%;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--color-bg-card);
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 0.8rem 1rem;
+  transition: all 0.5s ease;
+}
+
+.quiz-option-clickable {
+  cursor: pointer;
+}
+
+.quiz-option-clickable:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.quiz-correct {
+  border-color: var(--color-success);
+  background: rgba(81, 207, 102, 0.15);
+  animation: pulse 0.6s ease-out;
+}
+
+.quiz-wrong {
+  opacity: 0.35;
+  transform: scale(0.97);
+}
+
+.quiz-letter {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-base);
+  font-weight: 800;
+  color: #1a1a2e;
+  flex-shrink: 0;
+}
+
+.quiz-text {
+  font-size: var(--text-base);
+  font-weight: 500;
+  flex: 1;
+}
+
+.quiz-picks {
+  display: flex;
+  gap: 0.3rem;
+  flex-shrink: 0;
+}
+
+.quiz-pick {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  animation: bounce 0.3s ease-out;
+}
+
+.quiz-check {
+  font-size: var(--text-lg);
+  color: var(--color-success);
+  animation: bounce 0.5s ease-out;
+  flex-shrink: 0;
+}

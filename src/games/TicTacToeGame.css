@@ -1,0 +1,94 @@
+.ttt-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.ttt-title {
+  font-size: var(--text-xl);
+  font-weight: 700;
+}
+
+.ttt-turn {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.ttt-turn-indicator {
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+
+.ttt-result {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  font-size: var(--text-lg);
+  font-weight: 800;
+  animation: bounce 0.5s ease-out;
+}
+
+.ttt-retry-btn {
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ttt-retry-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius);
+  padding: 5px;
+}
+
+.ttt-cell {
+  width: 80px;
+  height: 80px;
+  background: var(--color-bg-card);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.ttt-cell:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.ttt-cell:disabled {
+  cursor: default;
+}
+
+.ttt-cell-win {
+  background: rgba(255, 215, 0, 0.15);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.ttt-mark {
+  font-size: var(--text-xl);
+  font-weight: 900;
+  animation: bounce 0.3s ease-out;
+  line-height: 1;
+}
+
+.ttt-legend {
+  display: flex;
+  gap: var(--space-lg);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text-muted);
+}

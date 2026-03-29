@@ -1,0 +1,66 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: transform 0.15s, filter 0.15s, box-shadow 0.15s;
+  letter-spacing: 0.5px;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-sm {
+  padding: 0.5rem 1.2rem;
+  font-size: var(--text-sm);
+}
+
+.btn-md {
+  padding: 0.8rem 2rem;
+  font-size: var(--text-base);
+}
+
+.btn-lg {
+  padding: 1rem 3rem;
+  font-size: var(--text-lg);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-accent), #ffb700);
+  color: #1a1a2e;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-text);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-pink {
+  background: linear-gradient(135deg, var(--color-pink), var(--color-pink-dark));
+  color: white;
+}
+
+.btn-blue {
+  background: linear-gradient(135deg, var(--color-blue), var(--color-blue-dark));
+  color: white;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, var(--color-danger), #e03131);
+  color: white;
+}

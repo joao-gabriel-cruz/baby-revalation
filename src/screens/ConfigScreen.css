@@ -1,0 +1,319 @@
+.config-screen {
+  background: var(--color-bg);
+  padding: var(--space-lg);
+  align-items: stretch;
+}
+
+.config-container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.config-title {
+  font-size: var(--text-xl);
+  font-weight: 800;
+  text-align: center;
+  background: linear-gradient(135deg, var(--color-pink), var(--color-blue));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.config-section {
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.config-label {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.config-input {
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  padding: 0.7rem 1rem;
+  color: var(--color-text);
+  font-size: var(--text-base);
+  width: 100%;
+  transition: border-color 0.2s;
+}
+
+.config-input:focus {
+  border-color: var(--color-accent);
+}
+
+.config-select {
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  padding: 0.5rem 1rem;
+  color: var(--color-text);
+  font-size: var(--text-sm);
+}
+
+.config-gender-toggle {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.gender-btn {
+  flex: 1;
+  padding: 1rem;
+  border-radius: var(--radius);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  border: 3px solid transparent;
+  transition: all 0.2s;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-text-muted);
+}
+
+.gender-boy.active {
+  background: rgba(77, 171, 247, 0.2);
+  border-color: var(--color-blue);
+  color: var(--color-blue);
+}
+
+.gender-girl.active {
+  background: rgba(255, 107, 157, 0.2);
+  border-color: var(--color-pink);
+  color: var(--color-pink);
+}
+
+.config-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.suggestion-chip {
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.suggestion-chip.active {
+  background: rgba(255, 215, 0, 0.15);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.config-colors {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.color-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  font-size: var(--text-base);
+}
+
+.color-toggle {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.color-btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--radius);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  border: 3px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-text-muted);
+}
+
+.color-btn.color-blue.active {
+  background: rgba(77, 171, 247, 0.2);
+  border-color: var(--color-blue);
+  color: var(--color-blue);
+}
+
+.color-btn.color-pink.active {
+  background: rgba(255, 107, 157, 0.2);
+  border-color: var(--color-pink);
+  color: var(--color-pink);
+}
+
+.rounds-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.round-item {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.round-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: 0.7rem 1rem;
+}
+
+.round-number {
+  background: rgba(255, 215, 0, 0.2);
+  color: var(--color-accent);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: var(--text-sm);
+  flex-shrink: 0;
+}
+
+.round-type {
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.round-preview {
+  flex: 1;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.round-actions {
+  display: flex;
+  gap: 0.3rem;
+  flex-shrink: 0;
+}
+
+.round-action-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  color: var(--color-text-muted);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: all 0.15s;
+}
+
+.round-action-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--color-text);
+}
+
+.round-action-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.round-delete:hover:not(:disabled) {
+  background: rgba(255, 107, 107, 0.2);
+  color: var(--color-danger);
+}
+
+.round-edit {
+  padding: 0 1rem 1rem;
+}
+
+.round-fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.option-row {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.correct-label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.tf-toggle {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.tf-btn {
+  flex: 1;
+  padding: 0.6rem;
+  border-radius: var(--radius);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tf-btn.active:first-child {
+  background: rgba(81, 207, 102, 0.15);
+  border-color: var(--color-success);
+  color: var(--color-success);
+}
+
+.tf-btn.active:last-child {
+  background: rgba(255, 107, 107, 0.15);
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+}
+
+.field-hint {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.add-round {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.config-buttons {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  padding-bottom: var(--space-lg);
+}

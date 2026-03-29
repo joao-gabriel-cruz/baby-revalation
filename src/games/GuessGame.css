@@ -1,0 +1,53 @@
+.guess-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.guess-question {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.guess-hint {
+  font-size: var(--text-base);
+  color: var(--color-accent);
+  text-align: center;
+}
+
+.guess-mystery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+}
+
+.guess-qmark {
+  font-size: 6rem;
+  font-weight: 900;
+  color: var(--color-accent);
+  animation: float 2s ease-in-out infinite;
+  text-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+}
+
+.guess-revealed {
+  text-align: center;
+  animation: bounce 0.5s ease-out;
+}
+
+.guess-decide {
+  font-size: var(--text-lg);
+  font-weight: 800;
+  color: var(--color-accent);
+}
+
+.guess-sub {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  margin-top: var(--space-sm);
+}

@@ -1,0 +1,46 @@
+.games-screen {
+  background: var(--color-bg);
+  justify-content: flex-start;
+  gap: 0;
+}
+
+.games-round-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  animation: fadeIn 0.4s ease-out;
+}
+
+.round-tag {
+  background: rgba(255, 215, 0, 0.15);
+  color: var(--color-accent);
+  padding: 0.3rem 1rem;
+  border-radius: 50px;
+  font-size: var(--text-sm);
+  font-weight: 700;
+}
+
+.round-counter {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+}
+
+.games-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: var(--space-sm) var(--space-lg);
+  overflow: hidden;
+}
+
+.games-controls {
+  display: flex;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  justify-content: center;
+  flex-shrink: 0;
+}

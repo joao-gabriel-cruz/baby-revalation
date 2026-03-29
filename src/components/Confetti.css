@@ -1,0 +1,37 @@
+.confetti-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.confetti-particle {
+  position: absolute;
+  top: -20px;
+  width: var(--size);
+  aspect-ratio: var(--ar);
+  background: var(--color);
+  border-radius: 2px;
+  animation: confettiFall var(--duration, 3s) var(--delay, 0s) ease-out forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform:
+      translateY(100vh)
+      translateX(var(--x))
+      rotate(var(--rotate))
+      scale(0.3);
+    opacity: 0;
+  }
+}

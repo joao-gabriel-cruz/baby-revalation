@@ -1,0 +1,87 @@
+.reveal-screen {
+  position: relative;
+  overflow: hidden;
+  animation: bgReveal 1s ease-out forwards;
+}
+
+.reveal-bg-pink {
+  --reveal-color: #FF6B9D;
+  --reveal-color-light: #FFB3CC;
+}
+
+.reveal-bg-blue {
+  --reveal-color: #4DABF7;
+  --reveal-color-light: #A5D8FF;
+}
+
+.reveal-burst {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--reveal-color-light), transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: burst 2s ease-out 0.3s forwards;
+  pointer-events: none;
+}
+
+.reveal-burst-2 {
+  animation-delay: 0.6s;
+  opacity: 0.5;
+}
+
+.reveal-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.reveal-emoji {
+  font-size: 6rem;
+  animation: textBounce 0.8s ease-out 0.5s backwards;
+}
+
+.reveal-phrase {
+  font-size: var(--text-giant);
+  font-weight: 900;
+  text-align: center;
+  color: white;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  animation: textBounce 0.8s ease-out 0.8s backwards;
+  line-height: 1.2;
+  max-width: 90vw;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation:
+    textBounce 0.8s ease-out 0.8s backwards,
+    shimmer 3s linear 2s infinite;
+}
+
+.reveal-reset {
+  position: absolute;
+  bottom: var(--space-lg);
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.2s;
+  z-index: 20;
+}
+
+.reveal-reset:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
