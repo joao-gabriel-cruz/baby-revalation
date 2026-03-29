@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from 'react'
+import { useState, useCallback } from 'react'
 import type { WheelRound, RoundState } from '../types'
 import './WheelOfFortuneGame.css'
 
