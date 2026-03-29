@@ -1,3 +1,4 @@
+import { useParams } from 'react-router-dom'
 import './ImitacaoPage.css'
 
 type Team = 'menino' | 'menina'
@@ -25,17 +26,27 @@ const TEAM_EMOJIS: Record<Team, string[]> = {
   menina: ['👶', '🍼', '🧸', '⭐', '🎀', '💖'],
 }
 
-type Props = {
-  team: Team
-  numero: number
-}
+export function ImitacaoPage() {
+  const { team, numero: numeroStr } = useParams<{ team: string; numero: string }>()
+  const validTeam = (team === 'menino' || team === 'menina') ? team as Team : null
+  const numero = Number(numeroStr)
 
-export function ImitacaoPage({ team, numero }: Props) {
+  if (!validTeam || isNaN(numero)) {
+    return (
+      <div className="imitacao-page imitacao-menino">
+        <div className="imitacao-content">
+          <h1>Página inválida!</h1>
+          <p>Use /imitacao/menino/1 ou /imitacao/menina/1</p>
+        </div>
+      </div>
+    )
+  }
+
   const imitacaoMeninas = IMITACOES[numero]
-  const emojis = TEAM_EMOJIS[team]
+  const emojis = TEAM_EMOJIS[validTeam]
 
   const imitacaoMenino = IMITACOES_MENINO[numero]
-  const imitacao = team === 'menino' ? imitacaoMenino : imitacaoMeninas
+  const imitacao = validTeam === 'menino' ? imitacaoMenino : imitacaoMeninas
 
   if (!imitacao) {
     return (
@@ -49,7 +60,7 @@ export function ImitacaoPage({ team, numero }: Props) {
   }
 
   return (
-    <div className={`imitacao-page imitacao-${team}`}>
+    <div className={`imitacao-page imitacao-${validTeam}`}>
       {/* Floating decorations */}
       <div className="imitacao-decorations">
         {Array.from({ length: 12 }).map((_, i) => (
@@ -71,7 +82,7 @@ export function ImitacaoPage({ team, numero }: Props) {
       {/* Main content */}
       <div className="imitacao-content">
         <div className="imitacao-team-badge">
-          Time {team === 'menino' ? 'Menino 💙' : 'Menina 💖'}
+          Time {validTeam === 'menino' ? 'Menino 💙' : 'Menina 💖'}
         </div>
 
         <div className="imitacao-number">

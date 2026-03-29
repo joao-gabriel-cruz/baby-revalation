@@ -1,24 +1,17 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import App from './App.tsx'
 import { ImitacaoPage } from './screens/ImitacaoPage.tsx'
 
-function Root() {
-  const path = window.location.pathname
-  const match = path.match(/^\/imitacao\/(menino|menina)\/([1-6])$/)
-
-  if (match) {
-    const team = match[1] as 'menino' | 'menina'
-    const numero = parseInt(match[2])
-    return <ImitacaoPage team={team} numero={numero} />
-  }
-
-  return <App />
-}
-
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Root />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/imitacao/:team/:numero" element={<ImitacaoPage />} />
+        <Route path="*" element={<App />} />
+      </Routes>
+    </BrowserRouter>
   </StrictMode>,
 )
