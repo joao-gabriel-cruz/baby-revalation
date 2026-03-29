@@ -16,6 +16,17 @@ export const DEFAULT_ROUNDS: GameRound[] = [
     options: ['Papai Márcio', 'Mamãe Taynara', 'Vovó Rosi', 'Titia Laila'],
     correctIndex: 0,
   },
+    {
+    type: 'wheel',
+    segments: [
+      '1',
+      '2',
+      '3',
+      '4',
+      '5',
+      '6',
+    ],
+  },
    {
     type: 'quiz',
     question: 'O nome Hadassa foi escolhido através de?',
